@@ -2,8 +2,9 @@
     margin-top: 30px;
 }
 .food-display h2{
-    font-size: 15px;
+    font-size: 35px;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 .food-diasplay-list{
     display: grid;
