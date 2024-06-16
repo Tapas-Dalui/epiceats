@@ -24,7 +24,8 @@
     font-size: max(4.5vw,22px);
 }
 .header-contents h2 span{
-    color: #5fb900;
+    color: #67c700;
+    font-weight: bold;
 }
 .header-contents p{
     color: white;
