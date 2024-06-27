@@ -3,12 +3,13 @@ import './Footer.css'
 import { assets } from '../../assets/assets'
 
 function Footer() {
+    const date = new Date()
     return (
         <>
             <div className="footer" id='footer'>
                 <div className="footer-content">
                     <div className="footer-content-left">
-                        <img src={assets.footer} alt="" />
+                        <img src={assets.footer} className='footer-logo' alt="" />
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dignissimos sint minus sapiente. A ducimus debitis, perspiciatis et aliquam fugit error ipsum fuga veniam aperiam dolore nobis in quidem delectus.</p>
                         <div className="footer-social-icons">
                             <img src={assets.facebook_icon} alt="" />
@@ -29,14 +30,14 @@ function Footer() {
                     <div className="footer-content-right">
                         <h2>GET IN TOUCH</h2>
                         <ul>
-                            <li>+91 5258-369-47-256</li>
+                            <li>+91 558-369-47-256</li>
                             <li>contact@epiceates.com</li>
                         </ul>
                     </div>
                     
                 </div>
                 <hr />
-                <p className='footer-copyright'>Copyright 2024 @ EPICEATES Kitchen all right Reserved.</p>
+                <p className='footer-copyright'>Copyright &copy; {date.getFullYear()}  EPICEATES Kitchen all right Reserved.</p>
             </div>
         </>
     )

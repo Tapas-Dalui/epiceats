@@ -37,17 +37,13 @@
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: 20px;
-    border-radius: 20px;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
     cursor: pointer;
 }
 
 
 @media (max-width: 1050px){
-    .header{
-        height: 38vw;
-
-    }
     .header-contents{
         max-width: 45%;
     }

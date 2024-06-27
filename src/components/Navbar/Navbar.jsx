@@ -1,28 +1,68 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
+import { StoreContext } from '../../Context/StoreContext'
 
-function Navbar() {
 
-    const [menu, setMenu] = useState("home")
+function Navbar({setShowLogin}) {
+
+    // const [menu, setMenu] = useState("home")
+    const {getTotalCartAmount} = useContext(StoreContext)
 
     return (
         <>
             <div className="navbar">
+                
                 <img src={assets.logo} alt="" className="logo" />
+               
                 <ul className="navbar-menu">
-                    <li onClick={() => { setMenu('home') }} className={menu === 'home' ? 'active' : ''}>Home</li>
-                    <li onClick={() => { setMenu('menu') }} className={menu === 'menu' ? 'active' : ''}>Menu</li>
-                    <li onClick={() => { setMenu('mobile-app') }} className={menu === 'mobile-app' ? 'active' : ''}>Mobile App</li>
-                    <li onClick={() => { setMenu('contact-us') }} className={menu === 'contact-us' ? 'active' : ''}>Contact Us</li>
+                    <Link
+                        to="/" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-10} 
+                        duration={500} 
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        to="explore-menu" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-10} 
+                        duration={500} 
+                    >
+                        Menu
+                    </Link>
+                    <Link
+                        to="app-download" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-10} 
+                        duration={500} 
+                    >
+                        Download App
+                    </Link>
+                    <Link
+                        to="footer" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-10} 
+                        duration={500} 
+                    >
+                        Contact
+                    </Link>
+                    
                 </ul>
                 <div className="navbar-right">
                     <img src={assets.search_icon} alt="" />
                     <div className="navbar-search-icon">
-                        <img src={assets.basket_icon} alt="" />
-                        <div className="dot"></div>
+                        <NavLink to='/cart'><img src={assets.basket_icon} alt="" /></NavLink>
+                        <div className={getTotalCartAmount()===0 ? " " : "dot" }></div>
                     </div>
-                    <button>Sign in</button>
+                    <button onClick={()=>setShowLogin(true)} >Sign in</button>
                 </div>
             </div>
         </>
