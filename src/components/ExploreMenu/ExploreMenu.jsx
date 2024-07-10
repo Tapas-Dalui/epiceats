@@ -7,7 +7,9 @@ function ExploreMenu({ category, setCategory }) {
         <>
             <div className="explore-menu" id='explore-menu'>
                 <h1>Explore Our Menu</h1>
-                <p className='explore-menu-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nam totam officia illum quas sed, explicabo in saepe aliquam deserunt sunt sint ex tempora dignissimos facere neque nostrum iusto id?</p>
+                <p className='explore-menu-text'>
+                    Our food menu offers a delightful journey through a diverse selection of dishes, each crafted with the finest ingredients and a passion for flavor. From savory starters to decadent desserts, every item is designed to satisfy your cravings and create a memorable dining experience.
+                </p>
                 <div className="explore-menu-list">
                     {menu_list.map((item, index) => {
                         return (

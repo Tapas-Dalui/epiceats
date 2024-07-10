@@ -10,7 +10,9 @@ function Footer() {
                 <div className="footer-content">
                     <div className="footer-content-left">
                         <img src={assets.footer} className='footer-logo' alt="" />
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dignissimos sint minus sapiente. A ducimus debitis, perspiciatis et aliquam fugit error ipsum fuga veniam aperiam dolore nobis in quidem delectus.</p>
+                        <p>
+                            Epiceates is an innovative online cloud kitchen delivering gourmet meals right to your doorstep. With a focus on quality and convenience, our expertly crafted dishes cater to diverse tastes and dietary preferences, ensuring a restaurant-quality dining experience in the comfort of your home. Enjoy the ease of ordering and the joy of savoring exceptional cuisine with Epiceates.  
+                        </p>
                         <div className="footer-social-icons">
                             <img src={assets.facebook_icon} alt="" />
                             <img src={assets.twitter_icon} alt="" />
